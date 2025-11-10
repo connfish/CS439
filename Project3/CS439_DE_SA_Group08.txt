@@ -1,0 +1,9 @@
+Libraries: 
+import Math
+from scipy.spatial.distance import pdist, squareform
+from collections import Counter
+from matplotlib import cm, colors as mcolors
+Work:
+Connor: Part 1
+Justin: Powerpoint, Part 2.1, Part2.4
+Jon: Part 2.2, Part 2.3

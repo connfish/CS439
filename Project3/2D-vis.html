@@ -1,0 +1,61 @@
+<head>
+  <style> body { margin: 0; } </style>
+
+  <script src="//cdn.jsdelivr.net/npm/force-graph"></script>
+  <!--<script src="../../dist/force-graph.js"></script>-->
+<body>
+  <div id="controls">
+    <label for="sd-select">Select dataset:</label>
+    <select id="sd-select" aria-label="Select dataset">
+      <option value="-1SD">-1SD</option>
+      <option value="-2SD">-2SD</option>
+      <option value="-3SD">-3SD</option>
+    </select>
+    <span id="status" aria-live="polite">Loaded: -1SD</span>
+  </div>
+
+  <div id="graph"></div>
+
+  <script>
+    (function(){
+      const fileMap = {
+        '-1SD': 'Student_Assessment_Graph_-1SD.json',
+        '-2SD': 'Student_Assessment_Graph_-2SD.json',
+        '-3SD': 'Student_Assessment_Graph_-3SD.json'
+      };
+
+      const select = document.getElementById('sd-select');
+      const status = document.getElementById('status');
+      const container = document.getElementById('graph');
+
+      const Graph = new ForceGraph(container)
+        .nodeId('id')
+        .nodeLabel('id')
+        .linkSource('source')
+        .linkTarget('target');
+
+      function setStatus(text) { status.textContent = text; }
+
+      async function loadAndRender(sdKey) {
+        const file = fileMap[sdKey] || fileMap['-1SD'];
+        setStatus(`Loading: ${sdKey}...`);
+        try {
+          const res = await fetch(file);
+          if (!res.ok) throw new Error(res.status + ' ' + res.statusText);
+          const data = await res.json();
+          Graph.graphData(data);
+          setStatus(`Loaded: ${sdKey}`);
+        } catch (err) {
+          console.error('Failed to load dataset', err);
+          setStatus(`Error loading ${sdKey}`);
+        }
+      }
+
+      select.addEventListener('change', () => loadAndRender(select.value));
+      select.value = '-1SD';
+      loadAndRender(select.value);
+    })();
+  </script>
+</body>
+```
+</body>

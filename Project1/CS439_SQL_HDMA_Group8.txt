@@ -1,0 +1,5 @@
+Connor: Task 1 and 2 
+Justin: Task 3 and 5
+Jon: Task 4
+
+In task 5 we used the numpy library everything else was provided

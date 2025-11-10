@@ -1,0 +1,7 @@
+Libraries used:
+import re
+from sklearn.naive_bayes import ComplementNB
+Blame:
+Connor: IMDB Notebook
+Justin: SVM Notebook 
+jon: github setup
