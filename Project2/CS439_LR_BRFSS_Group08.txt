@@ -1,0 +1,17 @@
+﻿Libraries(modules) Used:
+* sys
+* os
+* importlib
+* pathlib
+* numpy as np
+* zipfile
+* io
+
+
+Division of labor:
+Connor:
+* Worked on LinearRegression.py file and regression_health(data_dir, columns) in CS439_LR_BRFSS_Group08.ipynb
+Justin:
+* Worked on regression_health(data_dir, columns) in CS439_LR_BRFSS_Group08.ipynb
+Jon:
+* Worked on regression_health(data_dir, columns) in CS439_LR_BRFSS_Group08.ipynb

@@ -1,0 +1,6 @@
+Libraries:
+from sklearn.metrics import r2_score
+Blame:
+Connor: Task 1 
+Justin: Task 2.1, 2.2
+Jon: Task 2.3, 2.4
