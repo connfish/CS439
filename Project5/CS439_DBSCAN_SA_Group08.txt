@@ -1,3 +1,6 @@
 Libraries:
-
+no extra libraries
 Blame:
+connor:Task 3 and 4
+justin:task 2
+jon:task 1
