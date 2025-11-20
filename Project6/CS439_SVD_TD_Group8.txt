@@ -1,0 +1,19 @@
+﻿Libraries:
+* pandas as pd
+* numpy as np
+* os
+* csv
+* countVectorizer ( sklearn.feature_extraction.text )
+* normalize ( sklearn.preprocessing )
+* svd ( numpy.linalg )
+* matplotlib.pyplot as plt
+* PCA ( sklearn.decomposition )
+
+
+Division Of Labor:
+Connor Fisher
+* Worked on creating/normalizing matrix, and sum of squared similarities
+Jon Maxwell
+* Worked on generating synthetic, centroid documents, and similarity
+Justin Shaw
+* Plotted similarity scores and documents
